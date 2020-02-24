@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  background-color: #ccc;
 `
 const List = styled.ul``
 const ListItem = styled(Link)`
