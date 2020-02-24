@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
+import Link from "./Link"
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,13 +10,12 @@ const Wrapper = styled.div`
   background-color: #ccc;
 `
 const List = styled.ul``
+
 const ListItem = styled(Link)`
   margin-left: 1rem;
-  text-decoration: none;
 `
 const HomeLink = styled(Link)`
   font-size: 24px;
-  text-decoration: none;
 `
 const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 

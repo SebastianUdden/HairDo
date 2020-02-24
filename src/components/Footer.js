@@ -7,4 +7,4 @@ const Wrapper = styled.div`
   padding: 1rem;
 `
 
-export default ({}) => <Wrapper>Footer</Wrapper>
+export default () => <Wrapper>Footer</Wrapper>
