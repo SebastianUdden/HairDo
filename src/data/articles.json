@@ -4,24 +4,24 @@
     "slug": "classic-chic-ponytail",
     "description": "How to create an amazing ponytail, FAB!",
     "categories": ["him", "her"],
-    "imageUrl": "",
+    "imageUrl": "https://picsum.photos/600/400",
     "keywords": ["Ponytail", "Long hair", "Updo"],
     "steps": {
       "title": "Tutorial",
       "values": [
         {
           "title": "Step 1",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/300/200",
           "description": "Brush hair sleek with an hairbrush, i prefer to use Björn Axén Hairbrush"
         },
         {
           "title": "Step 2",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/300/200",
           "description": "Gather all hair in a tie"
         },
         {
           "title": "Step 3",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/300/200",
           "description": "Finish with Björn Axén Hairspray"
         }
       ]
@@ -31,17 +31,17 @@
       "values": [
         {
           "title": "Björn Axén Hairbrush",
-          "imageUrl": "",
-          "link": ""
+          "imageUrl": "https://picsum.photos/100/150",
+          "link": "https://picsum.photos/300/200"
         },
         {
           "title": "Black hairties",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/100/150",
           "link": ""
         },
         {
           "title": "Björn Axén Hairspray",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/100/150",
           "link": ""
         }
       ]

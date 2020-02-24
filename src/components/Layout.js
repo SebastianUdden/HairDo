@@ -10,7 +10,6 @@ const Wrapper = styled.div`
 `
 const Body = styled.div`
   flex: 1 0 auto;
-  padding: 0 1rem;
 `
 
 export default ({ categories, children }) => {
