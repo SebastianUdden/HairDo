@@ -28,7 +28,7 @@
     },
     "products": {
       "title": "Featured products",
-      "vaules": [
+      "values": [
         {
           "title": "Björn Axén Hairbrush",
           "imageUrl": "",
@@ -75,7 +75,7 @@
     },
     "products": {
       "title": "Featured products",
-      "vaules": [
+      "values": [
         {
           "title": "Björn Axén Hairbrush",
           "imageUrl": "",
@@ -122,7 +122,7 @@
     },
     "products": {
       "title": "Featured products",
-      "vaules": [
+      "values": [
         {
           "title": "Björn Axén Hairbrush",
           "imageUrl": "",

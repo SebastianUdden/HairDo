@@ -48,8 +48,8 @@ export default ({ categories = [] }) => {
     <Wrapper show={visible}>
       <HomeLink to="/">Home</HomeLink>
       <List>
-        {categories.map(category => (
-          <ListLink to={category.slug}>{category.title}</ListLink>
+        {categories.map((category, index) => (
+          <ListLink key={index} to={category.slug}>{category.title}</ListLink>
         ))}
       </List>
     </Wrapper>

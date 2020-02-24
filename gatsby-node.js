@@ -1,8 +1,7 @@
-const categoriesRaw = require("./src/data/categories.json")
+const categories = require("./src/data/categories.json")
 const articles = require("./src/data/articles.json")
 
 exports.createPages = async ({ actions: { createPage } }) => {
-  const categories = Object.values(categoriesRaw)
   createPage({
     path: `/`,
     component: require.resolve("./src/templates/homePage.js"),
