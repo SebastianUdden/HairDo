@@ -1,12 +1,12 @@
 import React from "react"
 import Layout from "../components/Layout"
 
-export default ({ pageContext }) => {
+export default ({ pageContext: { categories } }) => {
   return (
-    <Layout>
+    <Layout categories={categories}>
       <h1>Home</h1>
       <ul>
-        {Object.values(pageContext).map(page => (
+        {categories.map(page => (
           <li>
             <a href={page.slug}>{page.title}</a>
           </li>

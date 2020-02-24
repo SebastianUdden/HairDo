@@ -2,7 +2,9 @@ import React from "react"
 import styled from "styled-components"
 
 const Wrapper = styled.div`
-  border: 1px solid red;
+  flex-shrink: 0;
+  background-color: #ccc;
+  padding: 1rem;
 `
 
 export default ({}) => <Wrapper>Footer</Wrapper>
