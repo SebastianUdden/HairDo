@@ -1,10 +1,10 @@
 import React from "react"
+import Layout from "../components/Layout"
 
 export default ({ pageContext: { title } }) => {
   return (
-    <div>
+    <Layout>
       <h1>{title}</h1>
-      <a href="/">Home</a>
-    </div>
+    </Layout>
   )
 }

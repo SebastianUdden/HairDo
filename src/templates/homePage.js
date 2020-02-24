@@ -1,8 +1,9 @@
 import React from "react"
+import Layout from "../components/Layout"
 
 export default ({ pageContext }) => {
   return (
-    <div>
+    <Layout>
       <h1>Home</h1>
       <ul>
         {Object.values(pageContext).map(page => (
@@ -11,6 +12,6 @@ export default ({ pageContext }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   )
 }

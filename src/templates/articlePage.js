@@ -1,5 +1,10 @@
 import React from "react"
+import Layout from "../components/Layout"
 
 export default ({ pageContext: { title } }) => {
-  return <h1>{title}</h1>
+  return (
+    <Layout>
+      <h1>{title}</h1>
+    </Layout>
+  )
 }
