@@ -5,17 +5,21 @@ import Step from "../components/articlePage/Step"
 import Image from "../components/ui/Image"
 import Card from "../components/ui/Card"
 import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
+import { theme } from "../constants/colors"
 
 const Title = styled.h1`
-  text-align: center;
+  text-transform: uppercase;
 `
 const Description = styled.p`
-  padding: 1rem 0;
+  padding: 0 0 1rem 0;
 `
 const Subtitle = styled.h2`
   text-align: center;
+  color: ${theme.articlePage.subtitle};
+  text-transform: uppercase;
 `
 const StepsWrapper = styled.div`
+  padding: 1rem 0;
   ${MEDIA_MIN_MEDIUM} {
     margin: 0 10vw;
   }

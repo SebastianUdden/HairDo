@@ -4,9 +4,9 @@
     "slug": "classic-chic-ponytail",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "categories": ["him", "her"],
-    "imageUrl": "https://picsum.photos/600/400",
+    "imageUrl": "https://picsum.photos/400/400",
     "steps": {
-      "title": "Tutorial",
+      "title": "How To",
       "values": [
         {
           "title": "Step 1",
@@ -30,32 +30,32 @@
       "values": [
         {
           "title": "Björn Axén Hairbrush",
-          "imageUrl": "https://picsum.photos/100/100",
+          "imageUrl": "https://picsum.photos/100/105",
           "link": "https://google.com"
         },
         {
           "title": "Black hairties",
-          "imageUrl": "https://picsum.photos/100/100",
+          "imageUrl": "https://picsum.photos/100/110",
           "link": "https://google.com"
         },
         {
           "title": "Björn Axén Hairspray",
-          "imageUrl": "https://picsum.photos/100/100",
+          "imageUrl": "https://picsum.photos/100/115",
           "link": "https://google.com"
         },
         {
-          "title": "Björn Axén Hairpins",
-          "imageUrl": "https://picsum.photos/100/100",
+          "title": "Black Hairpins",
+          "imageUrl": "https://picsum.photos/100/120",
           "link": "https://google.com"
         },
         {
-          "title": "Björn Axén Hairspray",
-          "imageUrl": "https://picsum.photos/100/100",
+          "title": "Black Hairspray",
+          "imageUrl": "https://picsum.photos/100/125",
           "link": "https://google.com"
         },
         {
-          "title": "Björn Axén Hairpins",
-          "imageUrl": "https://picsum.photos/100/100",
+          "title": "White Hairpins",
+          "imageUrl": "https://picsum.photos/100/130",
           "link": "https://google.com"
         }
       ]
@@ -68,21 +68,21 @@
     "categories": ["her"],
     "imageUrl": "https://picsum.photos/800/500",
     "steps": {
-      "title": "Tutorial",
+      "title": "How To",
       "values": [
         {
           "title": "Step 1",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/800/500",
           "description": "Brush hair sleek with an hairbrush, i prefer to use Björn Axén Hairbrush"
         },
         {
           "title": "Step 2",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/800/500",
           "description": "Gather all hair in a tie"
         },
         {
           "title": "Step 3",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/800/500",
           "description": "Finish with Björn Axén Hairspray"
         }
       ]
@@ -92,17 +92,17 @@
       "values": [
         {
           "title": "Björn Axén Hairbrush",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/400/400",
           "link": "https://google.com"
         },
         {
           "title": "Black hairties",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/400/410",
           "link": "https://google.com"
         },
         {
           "title": "Björn Axén Hairspray",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/400/420",
           "link": "https://google.com"
         }
       ]
@@ -113,23 +113,23 @@
     "slug": "dabby-chic-ponytail",
     "description": "How to create an amazing ponytail, FAB!",
     "categories": ["her"],
-    "imageUrl": "https://picsum.photos/400/400",
+    "imageUrl": "https://picsum.photos/800/1000",
     "steps": {
-      "title": "Tutorial",
+      "title": "How To",
       "values": [
         {
           "title": "Step 1",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/600/400",
           "description": "Brush hair sleek with an hairbrush, i prefer to use Björn Axén Hairbrush"
         },
         {
           "title": "Step 2",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/600/400",
           "description": "Gather all hair in a tie"
         },
         {
           "title": "Step 3",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/600/400",
           "description": "Finish with Björn Axén Hairspray"
         }
       ]
@@ -139,17 +139,17 @@
       "values": [
         {
           "title": "Björn Axén Hairbrush",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/400/400",
           "link": "https://google.com"
         },
         {
           "title": "Black hairties",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/400/400",
           "link": "https://google.com"
         },
         {
           "title": "Björn Axén Hairspray",
-          "imageUrl": "",
+          "imageUrl": "https://picsum.photos/400/400",
           "link": "https://google.com"
         }
       ]
@@ -159,7 +159,7 @@
     "title": "Long beard",
     "slug": "long-beard",
     "description": "Get a well groomed and well grown look!",
-    "imageUrl": "https://picsum.photos/400/400",
+    "imageUrl": "https://picsum.photos/410/400",
     "categories": ["him"]
   }
 ]

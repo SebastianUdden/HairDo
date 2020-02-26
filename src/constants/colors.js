@@ -54,6 +54,7 @@ export const theme = {
     text: GREEN_THEME.grey,
   },
   articlePage: {
-    divider: GREEN_THEME.greenDark,
+    subtitle: GREEN_THEME.greenExtraDark,
+    divider: GREEN_THEME.grey,
   },
 }

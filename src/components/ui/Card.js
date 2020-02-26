@@ -67,14 +67,14 @@ export default ({ title, slug, imageUrl, link }) => {
   if (slug) {
     return (
       <Link to={slug}>
-        <Image imageUrl={imageUrl} alt={title}></Image>
+        <Image imageUrl={imageUrl} alt={title} height="70%" />
         <Title>{title}</Title>
       </Link>
     )
   } else {
     return (
       <ExternalLink href={link} target="_blank">
-        <Image imageUrl={imageUrl} alt={title}></Image>
+        <Image imageUrl={imageUrl} alt={title} height="70%" />
         <Title>{title}</Title>
       </ExternalLink>
     )

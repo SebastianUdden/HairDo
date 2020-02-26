@@ -19,8 +19,50 @@ module.exports = {
             family: `Roboto`,
             subsets: [`latin`],
           },
+          {
+            family: `Nunito`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Dosis`,
+            variants: [`400`, `700`],
+          },
         ],
       },
     },
   ],
 }
+
+// {
+//   family: `Dosis`,
+//   variants: [`400`, `700`],
+// },
+// {
+//   family: `Merienda One`,
+//   variants: [`400`],
+//   subsets: [`latin`],
+// },
+// {
+//   family: `Indie Flower`,
+//   variants: [`400`, `700`],
+// },
+// {
+//   family: `Dancing Script`,
+//   variants: [`400`, `700`],
+// },
+// {
+//   family: `Pacifico`,
+//   variants: [`400`, `700`],
+// },
+// {
+//   family: `Courgette`,
+//   variants: [`400`, `700`],
+// },
+// {
+//   family: `Halant`,
+//   variants: [`400`, `700`],
+// },
+// {
+//   family: `Cinsel Decorative`,
+//   variants: [`400`, `700`],
+// },
