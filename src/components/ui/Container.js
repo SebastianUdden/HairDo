@@ -8,10 +8,10 @@ const Wrapper = styled.div`
     margin: 0 10vw;
   }
   ${MEDIA_LARGE} {
-    margin: 0 15vw;
+    margin: 0 14vw;
   }
   ${MEDIA_X_LARGE} {
-    margin: 0 20vw;
+    margin: 0 18vw;
   }
 `
 export default ({ children }) => <Wrapper>{children}</Wrapper>

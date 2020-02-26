@@ -1,13 +1,15 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Link from "./ui/Link"
+import { theme } from "../constants/colors"
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
-  background-color: #ccc;
+  background-color: ${theme.header.background};
+  color: ${theme.header.text};
   top: 0;
   position: sticky;
   transform: ${p => (p.show ? "translateY(0%)" : "translateY(-100%)")};
@@ -24,7 +26,7 @@ const HomeLink = styled(Link)`
 const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 
 export default ({ categories = [] }) => {
-  if (typeof window === "undefined") return null;
+  if (typeof window === "undefined") return null
   let [position, setPosition] = useState(window.pageYOffset)
   let [visible, setVisible] = useState(true)
 
@@ -49,7 +51,9 @@ export default ({ categories = [] }) => {
       <HomeLink to="/">Home</HomeLink>
       <List>
         {categories.map((category, index) => (
-          <ListLink key={index} to={category.slug}>{category.title}</ListLink>
+          <ListLink key={index} to={category.slug}>
+            {category.title}
+          </ListLink>
         ))}
       </List>
     </Wrapper>
