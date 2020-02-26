@@ -5,7 +5,6 @@
     "description": "How to create an amazing ponytail, FAB!",
     "categories": ["him", "her"],
     "imageUrl": "https://picsum.photos/600/400",
-    "keywords": ["Ponytail", "Long hair", "Updo"],
     "steps": {
       "title": "Tutorial",
       "values": [
@@ -51,8 +50,8 @@
     "title": "Shabby chic ponytail",
     "slug": "shabby-chic-ponytail",
     "description": "How to create an amazing ponytail, FAB!",
-    "imageUrl": "",
-    "keywords": ["Ponytail", "Long hair", "Updo"],
+    "categories": ["her"],
+    "imageUrl": "https://picsum.photos/800/500",
     "steps": {
       "title": "Tutorial",
       "values": [
@@ -98,8 +97,8 @@
     "title": "Dabby chic ponytail",
     "slug": "dabby-chic-ponytail",
     "description": "How to create an amazing ponytail, FAB!",
-    "imageUrl": "",
-    "keywords": ["Ponytail", "Long hair", "Updo"],
+    "categories": ["her"],
+    "imageUrl": "https://picsum.photos/400/400",
     "steps": {
       "title": "Tutorial",
       "values": [
@@ -140,5 +139,12 @@
         }
       ]
     }
+  },
+  {
+    "title": "Long beard",
+    "slug": "long-beard",
+    "description": "Get a well groomed and well grown look!",
+    "imageUrl": "https://picsum.photos/400/400",
+    "categories": ["him"]
   }
 ]

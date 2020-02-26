@@ -4,52 +4,6 @@ import Layout from "../components/Layout"
 import Card from "../components/ui/Card"
 import Container from "../components/ui/Container"
 
-const MOCK_DATA = [
-  {
-    title: "ponytail",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 2 ponytail 2 ponytail 2 ponytail 2 ponytail 2 ponytail 2 ponytail 2 ponytail 2",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-  {
-    title: "ponytail 3",
-    imageUrl: "https://picsum.photos/200/200",
-  },
-]
 const Title = styled.h1`
   text-align: center;
 `
@@ -61,7 +15,8 @@ const ArticleWrapper = styled.div`
 
 export default ({
   pageContext: {
-    categories,
+    articles = [],
+    categories = [],
     page: { title },
   },
 }) => {
@@ -70,8 +25,8 @@ export default ({
       <Container>
         <Title>{title}</Title>
         <ArticleWrapper>
-          {MOCK_DATA.map(({ imageUrl, title }) => (
-            <Card imageUrl={imageUrl} title={title}></Card>
+          {articles.map(({ title, slug, imageUrl }) => (
+            <Card title={title} slug={slug} imageUrl={imageUrl}></Card>
           ))}
         </ArticleWrapper>
       </Container>

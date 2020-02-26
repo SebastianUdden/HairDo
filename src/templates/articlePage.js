@@ -17,14 +17,22 @@ export default ({
       <Container>
         <h1>{title}</h1>
         <p>{description}</p>
-        <h2>{steps.title}</h2>
-        {steps.values.map((step, index) => (
-          <Step step={step} key={index}></Step>
-        ))}
-        <h2>{products.title}</h2>
-        {products.values.map((product, index) => (
-          <Product product={product} key={index}></Product>
-        ))}
+        {steps && (
+          <>
+            <h2>{steps.title}</h2>
+            {steps.values.map((step, index) => (
+              <Step step={step} key={index}></Step>
+            ))}
+          </>
+        )}
+        {products && (
+          <>
+            <h2>{products.title}</h2>
+            {products.values.map((product, index) => (
+              <Product product={product} key={index}></Product>
+            ))}
+          </>
+        )}
       </Container>
     </Layout>
   )

@@ -12,7 +12,15 @@ exports.createPages = async ({ actions: { createPage } }) => {
     createPage({
       path: page.slug,
       component: require.resolve("./src/templates/categoryPage.js"),
-      context: { categories, page },
+      context: {
+        articles: articles.filter(article =>
+          article.categories.some(
+            category => category.toLowerCase() === page.title.toLowerCase()
+          )
+        ),
+        categories,
+        page,
+      },
     })
   })
 
