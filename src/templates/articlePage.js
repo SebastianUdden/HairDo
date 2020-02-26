@@ -1,10 +1,30 @@
 import React from "react"
+import styled from "styled-components"
 import Layout from "../components/Layout"
 import Step from "../components/articlePage/Step"
-import Product from "../components/articlePage/Product"
 import Image from "../components/ui/Image"
-import Container from "../components/ui/Container"
+import Card from "../components/ui/Card"
+import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
 
+const Title = styled.h1`
+  text-align: center;
+`
+const Description = styled.p`
+  padding: 1rem 0;
+`
+const Subtitle = styled.h2`
+  text-align: center;
+`
+const StepsWrapper = styled.div`
+  ${MEDIA_MIN_MEDIUM} {
+    margin: 0 10vw;
+  }
+`
+const ProductsWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`
 export default ({
   pageContext: {
     categories,
@@ -14,26 +34,28 @@ export default ({
   return (
     <Layout categories={categories}>
       <Image imageUrl={imageUrl} alt={title} />
-      <Container>
-        <h1>{title}</h1>
-        <p>{description}</p>
+      <Title>{title}</Title>
+      <Description>{description}</Description>
+      <StepsWrapper>
         {steps && (
           <>
-            <h2>{steps.title}</h2>
-            {steps.values.map((step, index) => (
-              <Step step={step} key={index}></Step>
+            <Subtitle>{steps.title}</Subtitle>
+            {steps.values.map(step => (
+              <Step step={step}></Step>
             ))}
           </>
         )}
-        {products && (
-          <>
-            <h2>{products.title}</h2>
-            {products.values.map((product, index) => (
-              <Product product={product} key={index}></Product>
+      </StepsWrapper>
+      {products && (
+        <>
+          <Subtitle>{products.title}</Subtitle>
+          <ProductsWrapper>
+            {products.values.map(product => (
+              <Card {...product}></Card>
             ))}
-          </>
-        )}
-      </Container>
+          </ProductsWrapper>
+        </>
+      )}
     </Layout>
   )
 }

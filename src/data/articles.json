@@ -2,7 +2,7 @@
   {
     "title": "Classic chic ponytail",
     "slug": "classic-chic-ponytail",
-    "description": "How to create an amazing ponytail, FAB!",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "categories": ["him", "her"],
     "imageUrl": "https://picsum.photos/600/400",
     "steps": {
@@ -30,18 +30,33 @@
       "values": [
         {
           "title": "Björn Axén Hairbrush",
-          "imageUrl": "https://picsum.photos/100/150",
-          "link": "https://picsum.photos/300/200"
+          "imageUrl": "https://picsum.photos/100/100",
+          "link": "https://google.com"
         },
         {
           "title": "Black hairties",
-          "imageUrl": "https://picsum.photos/100/150",
-          "link": ""
+          "imageUrl": "https://picsum.photos/100/100",
+          "link": "https://google.com"
         },
         {
           "title": "Björn Axén Hairspray",
-          "imageUrl": "https://picsum.photos/100/150",
-          "link": ""
+          "imageUrl": "https://picsum.photos/100/100",
+          "link": "https://google.com"
+        },
+        {
+          "title": "Björn Axén Hairpins",
+          "imageUrl": "https://picsum.photos/100/100",
+          "link": "https://google.com"
+        },
+        {
+          "title": "Björn Axén Hairspray",
+          "imageUrl": "https://picsum.photos/100/100",
+          "link": "https://google.com"
+        },
+        {
+          "title": "Björn Axén Hairpins",
+          "imageUrl": "https://picsum.photos/100/100",
+          "link": "https://google.com"
         }
       ]
     }
@@ -78,17 +93,17 @@
         {
           "title": "Björn Axén Hairbrush",
           "imageUrl": "",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "title": "Black hairties",
           "imageUrl": "",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "title": "Björn Axén Hairspray",
           "imageUrl": "",
-          "link": ""
+          "link": "https://google.com"
         }
       ]
     }
@@ -125,17 +140,17 @@
         {
           "title": "Björn Axén Hairbrush",
           "imageUrl": "",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "title": "Black hairties",
           "imageUrl": "",
-          "link": ""
+          "link": "https://google.com"
         },
         {
           "title": "Björn Axén Hairspray",
           "imageUrl": "",
-          "link": ""
+          "link": "https://google.com"
         }
       ]
     }

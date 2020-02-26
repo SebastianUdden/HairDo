@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Layout from "../components/Layout"
 import Card from "../components/ui/Card"
-import Container from "../components/ui/Container"
 
 const Title = styled.h1`
   text-align: center;
@@ -22,14 +21,12 @@ export default ({
 }) => {
   return (
     <Layout categories={categories}>
-      <Container>
-        <Title>{title}</Title>
-        <ArticleWrapper>
-          {articles.map(({ title, slug, imageUrl }) => (
-            <Card title={title} slug={slug} imageUrl={imageUrl}></Card>
-          ))}
-        </ArticleWrapper>
-      </Container>
+      <Title>{title}</Title>
+      <ArticleWrapper>
+        {articles.map(({ title, slug, imageUrl }) => (
+          <Card title={title} slug={slug} imageUrl={imageUrl}></Card>
+        ))}
+      </ArticleWrapper>
     </Layout>
   )
 }
