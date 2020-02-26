@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+import SEO from "./Seo"
 import Link from "./ui/Link"
 import { theme } from "../constants/colors"
 
@@ -25,7 +26,7 @@ const HomeLink = styled(Link)`
 `
 const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 
-export default ({ categories = [] }) => {
+export default ({ meta, categories = [] }) => {
   if (typeof window === "undefined") return null
   let [position, setPosition] = useState(window.pageYOffset)
   let [visible, setVisible] = useState(true)
@@ -48,7 +49,8 @@ export default ({ categories = [] }) => {
   })
   return (
     <Wrapper show={visible}>
-      <HomeLink to="/">Home</HomeLink>
+      <SEO {...meta} />
+      <HomeLink to="/">HairDo</HomeLink>
       <List>
         {categories.map((category, index) => (
           <ListLink key={index} to={category.slug}>

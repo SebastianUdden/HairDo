@@ -36,7 +36,7 @@ export default ({
   },
 }) => {
   return (
-    <Layout categories={categories}>
+    <Layout meta={{ title, description }} categories={categories}>
       <Image imageUrl={imageUrl} alt={title} />
       <Title>{title}</Title>
       <Description>{description}</Description>

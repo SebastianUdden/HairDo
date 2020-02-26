@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header"
 import Footer from "./Footer"
 import { theme } from "../constants/colors"
@@ -25,12 +26,28 @@ const Body = styled.div`
   }
 `
 
-export default ({ categories, children }) => {
+export default ({ meta, categories, children }) => {
+  const { site } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            description
+            author
+          }
+        }
+      }
+    `
+  )
   return (
     <Wrapper>
-      <Header categories={categories} />
+      <Header
+        meta={{ ...meta, ...site.siteMetaData }}
+        categories={categories}
+      />
       <Body>{children}</Body>
-      <Footer />
+      <Footer meta={{ ...meta, ...site.siteMetaData }} />
     </Wrapper>
   )
 }

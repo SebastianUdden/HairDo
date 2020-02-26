@@ -5,8 +5,14 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `HairDo`,
+    description: `Helping you find your hairstyle`,
+    author: `Anne-Cathrine Josefsson, Sebastian Uddén & Sofia Moberg`,
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -30,6 +36,19 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Hair Do`,
+        short_name: `HairDo`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#C5EBD2`,
+        display: `standalone`,
+        icon: `src/images/icon.svg`,
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 }
 

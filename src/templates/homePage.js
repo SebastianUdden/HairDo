@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 
 export default ({ pageContext: { categories } }) => {
   return (
-    <Layout categories={categories}>
+    <Layout meta={{ title: "Home" }} categories={categories}>
       <h1>Home</h1>
     </Layout>
   )

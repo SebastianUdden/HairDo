@@ -16,11 +16,11 @@ export default ({
   pageContext: {
     articles = [],
     categories = [],
-    page: { title },
+    page: { title, description },
   },
 }) => {
   return (
-    <Layout categories={categories}>
+    <Layout meta={{ title, description }} categories={categories}>
       <Title>{title}</Title>
       <ArticleWrapper>
         {articles.map(({ title, slug, imageUrl }) => (
