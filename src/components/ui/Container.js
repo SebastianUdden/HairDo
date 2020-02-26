@@ -1,7 +1,17 @@
 import React from "react"
 import styled from "styled-components"
+import { MEDIA_MEDIUM, MEDIA_LARGE, MEDIA_X_LARGE } from "../../constants/sizes"
 
 const Wrapper = styled.div`
-  padding: 0 1rem;
+  margin: 0 0.6rem;
+  ${MEDIA_MEDIUM} {
+    margin: 0 10vw;
+  }
+  ${MEDIA_LARGE} {
+    margin: 0 15vw;
+  }
+  ${MEDIA_X_LARGE} {
+    margin: 0 20vw;
+  }
 `
 export default ({ children }) => <Wrapper>{children}</Wrapper>
