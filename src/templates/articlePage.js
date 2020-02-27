@@ -6,6 +6,7 @@ import Image from "../components/ui/Image"
 import Card from "../components/ui/Card"
 import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
 import { theme } from "../constants/colors"
+import Container from "../components/ui/Container"
 
 const Title = styled.h1`
   text-transform: uppercase;
@@ -37,29 +38,31 @@ export default ({
 }) => {
   return (
     <Layout meta={{ title, description }} categories={categories}>
-      <Image imageUrl={imageUrl} alt={title} />
-      <Title>{title}</Title>
-      <Description>{description}</Description>
-      <StepsWrapper>
-        {steps && (
+      <Container>
+        <Image imageUrl={imageUrl} alt={title} />
+        <Title>{title}</Title>
+        <Description>{description}</Description>
+        <StepsWrapper>
+          {steps && (
+            <>
+              <Subtitle>{steps.title}</Subtitle>
+              {steps.values.map(step => (
+                <Step step={step}></Step>
+              ))}
+            </>
+          )}
+        </StepsWrapper>
+        {products && (
           <>
-            <Subtitle>{steps.title}</Subtitle>
-            {steps.values.map(step => (
-              <Step step={step}></Step>
-            ))}
+            <Subtitle>{products.title}</Subtitle>
+            <ProductsWrapper>
+              {products.values.map(product => (
+                <Card {...product}></Card>
+              ))}
+            </ProductsWrapper>
           </>
         )}
-      </StepsWrapper>
-      {products && (
-        <>
-          <Subtitle>{products.title}</Subtitle>
-          <ProductsWrapper>
-            {products.values.map(product => (
-              <Card {...product}></Card>
-            ))}
-          </ProductsWrapper>
-        </>
-      )}
+      </Container>
     </Layout>
   )
 }

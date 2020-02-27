@@ -2,7 +2,8 @@
   "hero": {
     "title": "Dabby chic ponytail",
     "subtitle": "Check out the new Dabby look!",
-    "imageUrl": "https://picsum.photos/1600/800",
+    "color": "white",
+    "imageUrl": "https://picsum.photos/400/400",
     "slug": "dabby-chic-ponytail"
   },
   "promotionGrid": {

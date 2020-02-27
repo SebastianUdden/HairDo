@@ -5,7 +5,7 @@ import Image from "./Image"
 import { MEDIA_MEDIUM, MEDIA_LARGE, MEDIA_X_LARGE } from "../../constants/sizes"
 import { DP2, DP6 } from "../../constants/shadows"
 
-const Link = styled(GatsbyLink)`
+const InternalLink = styled(GatsbyLink)`
   text-decoration: none;
   color: black;
   min-height: 15rem;
@@ -66,10 +66,10 @@ const Title = styled.h2`
 export default ({ title, slug, imageUrl, link }) => {
   if (slug) {
     return (
-      <Link to={slug}>
+      <InternalLink to={slug}>
         <Image imageUrl={imageUrl} alt={title} height="70%" />
         <Title>{title}</Title>
-      </Link>
+      </InternalLink>
     )
   } else {
     return (
