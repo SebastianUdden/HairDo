@@ -27,8 +27,7 @@ const HomeLink = styled(Link)`
 const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 
 export default ({ meta, categories = [] }) => {
-  if (typeof window === "undefined") return null
-  let [position, setPosition] = useState(window.pageYOffset)
+  let [position, setPosition] = useState(0)
   let [visible, setVisible] = useState(true)
 
   useEffect(() => {

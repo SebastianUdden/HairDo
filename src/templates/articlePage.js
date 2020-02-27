@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Layout from "../components/Layout"
-import Step from "../components/articlePage/Step"
+import Step from "../components/article/Step"
 import Image from "../components/ui/Image"
 import Card from "../components/ui/Card"
 import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
