@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Dabby chic ponytail",
+    "subtitle": "Check out the new Dabby look!",
+    "imageUrl": "https://picsum.photos/1600/800",
+    "slug": "dabby-chic-ponytail"
+  },
+  "grids": [
+    {
+      "title": "",
+      "values": [
+        {
+          "title": "Men styles",
+          "imageUrl": "https://picsum.photos/100/140",
+          "slug": "him"
+        },
+        {
+          "title": "Women styles",
+          "imageUrl": "https://picsum.photos/100/150",
+          "slug": "her"
+        }
+      ]
+    },
+    {
+      "title": "Newly Added",
+      "values": []
+    }
+  ],
+  "newsletter": {
+    "title": "Sign up to our newsletter",
+    "description": "Get updates for the latest fashionable hair styles.",
+    "input": {
+      "label": "Email",
+      "buttonText": "Sign up",
+      "successText": "Yay success",
+      "errorText": "Aw something went wrong!"
+    }
+  }
+}

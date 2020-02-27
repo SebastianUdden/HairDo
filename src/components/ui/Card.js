@@ -73,7 +73,7 @@ export default ({ title, slug, imageUrl, link }) => {
     )
   } else {
     return (
-      <ExternalLink href={link} target="_blank">
+      <ExternalLink href={link} target="_blank" rel="noopener">
         <Image imageUrl={imageUrl} alt={title} height="70%" />
         <Title>{title}</Title>
       </ExternalLink>
