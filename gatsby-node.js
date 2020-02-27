@@ -1,11 +1,18 @@
 const categories = require("./src/data/categories.json")
 const articles = require("./src/data/articles.json")
+const home = require("./src/data/home.json")
+
+const sortByCreatedAt = (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
 
 exports.createPages = async ({ actions: { createPage } }) => {
   createPage({
     path: `/`,
     component: require.resolve("./src/templates/homePage.js"),
-    context: { categories },
+    context: {
+      articles: articles.sort(sortByCreatedAt).slice(0, 4),
+      categories,
+      home,
+    },
   })
 
   categories.forEach(page => {
