@@ -1,10 +1,9 @@
 import { Link as LinkUI } from "gatsby"
 import styled from "styled-components"
-import { theme } from "../../constants/colors"
 
 const Link = styled(LinkUI)`
   text-decoration: none;
-  color: ${theme.header.text};
+  color: inherit;
   cursor: pointer;
 `
 

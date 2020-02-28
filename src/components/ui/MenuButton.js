@@ -20,7 +20,7 @@ const SVG = styled.svg`
   margin: 0.25em;
   stroke-width: 5;
   stroke-linecap: square;
-  stroke: black;
+  stroke: ${p => p.color};
   transition: stroke 0.35s ease-out, transform 0.35s ease-in-out;
   transform: ${p => (p.active ? "rotate(225deg)" : "rotate(0)")};
   path {
@@ -35,7 +35,7 @@ const SVG = styled.svg`
   }
 `
 
-export default ({ onClick, active }) => {
+export default ({ onClick, active, color }) => {
   return (
     <Button id="menu" aria-pressed={active} onClick={onClick}>
       <SVG
@@ -44,6 +44,7 @@ export default ({ onClick, active }) => {
         viewBox="0 0 38 38"
         xmlns="https://www.w3.org/2000/svg"
         active={active}
+        color={color}
       >
         <title>Open</title>
         <path class="h t" d="M10.5 10l17 0" />

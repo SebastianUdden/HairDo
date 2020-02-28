@@ -12,41 +12,41 @@ const GREEN_THEME = {
   white: "#ffffff",
 
   /* Main Primary color */
-  green: "#C5EBD2",
-  greenExtraLight: "#FEFFFE",
-  greenLight: "#E9F9EE",
-  greenDark: "#99D6AE",
-  greenExtraDark: "#69B884",
+  green: "#4D7059",
+  greenExtraLight: "#C5D7CB",
+  greenLight: "#789983",
+  greenDark: "#26402F",
+  greenExtraDark: "#10301B",
 
   /* Main Secondary color (1) */
-  blue: "#C0DAE3",
-  blueExtraLight: "#FEFFFF",
-  blueLight: "#E7F3F7",
-  blueDark: "#8FB8C5",
-  blueExtraDark: "#5C8D9D",
+  blue: "#43585F",
+  blueExtraLight: "#B7C3C7",
+  blueLight: "#677C82",
+  blueDark: "#213136",
+  blueExtraDark: "#0F2229",
 
   /* Main Secondary color (2) */
-  beige: "#FFEBD6",
-  beigeExtraLight: "#FFFFFE",
-  beigeLight: "#FFF7EE",
-  beigeDark: "#FFDCB7",
-  beigeExtraDark: "#FCC78F",
+  beige: "#998169",
+  beigeExtraLight: "#FFF5EA",
+  beigeLight: "#D1BBA4",
+  beigeDark: "#574634",
+  beigeExtraDark: "#412C16",
 
   /* Main Complement color */
-  pink: "#FFDCD6",
-  pinkExtraLight: "#FFFEFE",
-  pinkLight: "#FFF1EE",
-  pinkDark: "#FFC2B7",
-  pinkExtraDark: "#FCA08F",
+  pink: "#997069",
+  pinkExtraLight: "#FFEDEA",
+  pinkLight: "#D1ABA4",
+  pinkDark: "#573A34",
+  pinkExtraDark: "#411C16",
 }
 
 export const theme = {
   header: {
     background: GREEN_THEME.green,
-    text: GREEN_THEME.grey,
+    text: GREEN_THEME.greenExtraLight,
   },
   sideMenu: {
-    background: GREEN_THEME.beigeLight,
+    background: GREEN_THEME.pinkDark,
     text: GREEN_THEME.beigeExtraLight,
   },
   body: {

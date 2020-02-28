@@ -57,7 +57,7 @@ export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
     <Wrapper show={visible}>
       <SEO {...meta} />
       <LeftHeader>
-        <MenuButton onClick={onShowSideMenu} active={showSideMenu} />
+        <MenuButton onClick={onShowSideMenu} active={showSideMenu} color={theme.header.text} />
         <HomeLink to="/">HairDo</HomeLink>
       </LeftHeader>
       <List>

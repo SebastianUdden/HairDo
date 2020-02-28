@@ -9,8 +9,7 @@ import MenuButton from "./ui/MenuButton"
 const Heading = styled.h1`
   margin: 0;
   padding: 0;
-  color: black;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid ${p => p.color};
   min-height: 3.3rem;
   font-size: x-large;
   display: flex;
@@ -19,10 +18,11 @@ const Heading = styled.h1`
   padding-left: 1rem;
 `
 const Categories = styled.ul`
-  margin: 00;
+  margin: 0;
   padding: 0 1rem;
   li {
     margin: 1rem 0 0;
+    list-style-type: none;
   }
 `
 
@@ -36,7 +36,7 @@ export default ({ isOpening, hide, setHide, categories = [] }) => {
       hide={hide}
       buttonElementId="hamburger-menu"
     >
-      <Heading>
+      <Heading color={theme.sideMenu.text}>
         <span>HairDo</span>
         <MenuButton onClick={() => setHide(true)} active={!hide} />
       </Heading>

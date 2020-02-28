@@ -10,7 +10,7 @@ const Scrim = styled.div`
   position: fixed;
   transform: ${p => (p.hide ? "translateX(-130%)" : "translate(0)")};
   transition: opacity 1s;
-  opacity: ${p => (p.hide ? 0 : 0.6)};
+  opacity: ${p => (p.hide ? 0 : 0.3)};
   z-index: 90;
   top: 0;
   bottom: 0;
@@ -35,6 +35,7 @@ const Wrapper = styled.div`
   background-color: ${p => p.backgroundColor};
   box-shadow: ${p => p.boxShadow};
   overflow-y: scroll;
+  opacity: 0.95;
 `
 
 const NavigationDrawer = ({
