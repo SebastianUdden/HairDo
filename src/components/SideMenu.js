@@ -20,10 +20,12 @@ const Heading = styled.h1`
 const Categories = styled.ul`
   margin: 0;
   padding: 0 1rem;
-  li {
-    margin: 1rem 0 0;
-    list-style-type: none;
-  }
+`
+
+const Category = styled.li`
+  margin: 1rem 0 0;
+  list-style-type: none;
+  font-size: large;
 `
 
 export default ({ show, onToggleSideMenu, categories = [] }) => (
@@ -44,10 +46,10 @@ export default ({ show, onToggleSideMenu, categories = [] }) => (
       />
     </Heading>
     <Categories>
-      {categories.map(({ slug, title }) => (
-        <li key={title}>
+      {categories.map(({ slug, hero: { title } }) => (
+        <Category key={title}>
           <Link to={slug}>{title}</Link>
-        </li>
+        </Category>
       ))}
     </Categories>
   </NavigationDrawer>

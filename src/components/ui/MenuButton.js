@@ -13,11 +13,9 @@ const Button = styled.button`
     position: absolute;
     text-indent: -200rem;
   }
-  opacity: 1;
-  pointer-events: all;
+  display: initial;
   ${MEDIA_MIN_MEDIUM} {
-    opacity: 0;
-    pointer-events: none;
+    display: none;
   }
 `
 const SVG = styled.svg`

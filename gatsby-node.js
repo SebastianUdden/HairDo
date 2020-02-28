@@ -22,7 +22,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
       context: {
         articles: articles.filter(article =>
           article.categories.some(
-            category => category.toLowerCase() === page.title.toLowerCase()
+            category => category.toLowerCase() === page.hero.title.toLowerCase()
           )
         ),
         categories,

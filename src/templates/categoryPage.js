@@ -3,27 +3,26 @@ import styled from "styled-components"
 import Layout from "../components/Layout"
 import Card from "../components/ui/Card"
 import Container from "../components/ui/Container"
+import Hero from "../components/ui/Hero"
 
-const Title = styled.h1`
-  text-align: center;
-`
 const ArticleWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0.6rem 0;
 `
 
 export default ({
   pageContext: {
     articles = [],
     categories = [],
-    page: { title, description },
+    page: { title, description, hero },
   },
 }) => {
   return (
     <Layout meta={{ title, description }} categories={categories}>
+      <Hero {...hero} />
       <Container>
-        <Title>{title}</Title>
         <ArticleWrapper>
           {articles.map(({ title, slug, imageUrl }) => (
             <Card

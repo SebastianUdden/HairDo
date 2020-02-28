@@ -43,11 +43,11 @@ const GREEN_THEME = {
 export const theme = {
   header: {
     background: GREEN_THEME.green,
-    text: GREEN_THEME.greenExtraLight,
+    text: GREEN_THEME.beigeExtraLight,
   },
   sideMenu: {
-    background: GREEN_THEME.pinkDark,
-    text: GREEN_THEME.beigeExtraLight,
+    background: GREEN_THEME.beigeExtraLight,
+    text: GREEN_THEME.greenExtraDark,
   },
   body: {
     heading: GREEN_THEME.grey,

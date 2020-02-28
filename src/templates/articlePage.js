@@ -8,6 +8,12 @@ import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
 import { theme } from "../constants/colors"
 import Container from "../components/ui/Container"
 
+const ContentWrapper = styled.div`
+  margin: 0 0.6rem;
+  ${MEDIA_MIN_MEDIUM} {
+    margin: 0;
+  }
+`
 const Title = styled.h1`
   text-transform: uppercase;
 `
@@ -40,28 +46,30 @@ export default ({
     <Layout meta={{ title, description }} categories={categories}>
       <Container>
         <Image imageUrl={imageUrl} alt={title} />
-        <Title>{title}</Title>
-        <Description>{description}</Description>
-        <StepsWrapper>
-          {steps && (
+        <ContentWrapper>
+          <Title>{title}</Title>
+          <Description>{description}</Description>
+          <StepsWrapper>
+            {steps && (
+              <>
+                <Subtitle>{steps.title}</Subtitle>
+                {steps.values.map(step => (
+                  <Step step={step}></Step>
+                ))}
+              </>
+            )}
+          </StepsWrapper>
+          {products && (
             <>
-              <Subtitle>{steps.title}</Subtitle>
-              {steps.values.map(step => (
-                <Step step={step}></Step>
-              ))}
+              <Subtitle>{products.title}</Subtitle>
+              <ProductsWrapper>
+                {products.values.map(product => (
+                  <Card {...product}></Card>
+                ))}
+              </ProductsWrapper>
             </>
           )}
-        </StepsWrapper>
-        {products && (
-          <>
-            <Subtitle>{products.title}</Subtitle>
-            <ProductsWrapper>
-              {products.values.map(product => (
-                <Card {...product}></Card>
-              ))}
-            </ProductsWrapper>
-          </>
-        )}
+        </ContentWrapper>
       </Container>
     </Layout>
   )

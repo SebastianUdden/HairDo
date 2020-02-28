@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./Header"
 import Footer from "./Footer"
 import SideMenu from "./SideMenu"
+import { theme } from "../constants/colors"
 
 const Wrapper = styled.div`
   min-height: 100vh;
@@ -12,6 +13,7 @@ const Wrapper = styled.div`
 `
 const Body = styled.div`
   flex: 1 0 auto;
+  color: ${theme.body.text};
 `
 
 export default ({ meta, categories, children }) => {

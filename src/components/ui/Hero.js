@@ -2,7 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-const Wrapper = styled(Link)`
+const LinkWrapper = styled(Link)`
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: ${p => p.color};
+`
+const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -26,8 +32,20 @@ const Title = styled.h1``
 const Subtitle = styled.h2``
 
 export default ({ title, subtitle, slug, imageUrl, color }) => {
+  if (slug) {
+    return (
+      <LinkWrapper to={slug} color={color}>
+        <HeroImage image={imageUrl}>
+          <HeroText>
+            <Title>{title}</Title>
+            <Subtitle>{subtitle}</Subtitle>
+          </HeroText>
+        </HeroImage>
+      </LinkWrapper>
+    )
+  }
   return (
-    <Wrapper to={slug} color={color}>
+    <Wrapper color={color}>
       <HeroImage image={imageUrl}>
         <HeroText>
           <Title>{title}</Title>

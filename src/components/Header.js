@@ -5,18 +5,20 @@ import Link from "./ui/Link"
 import { theme } from "../constants/colors"
 import MenuButton from "./ui/MenuButton"
 import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
+import Container from "./ui/Container"
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem 0 0;
   background-color: ${theme.header.background};
   color: ${theme.header.text};
   top: 0;
   position: sticky;
   transform: ${p => (p.show ? "translateY(0%)" : "translateY(-100%)")};
   transition: transform 0.4s;
+`
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `
 const LeftHeader = styled.div`
   display: flex;
@@ -42,7 +44,7 @@ const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 
 export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
   let [position, setPosition] = useState(0)
-  let [visible, setVisible] = useState(false)
+  let [visible, setVisible] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,22 +64,26 @@ export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
   })
   return (
     <Wrapper show={visible}>
-      <SEO {...meta} />
-      <LeftHeader>
-        <MenuButton
-          onClick={onShowSideMenu}
-          active={showSideMenu}
-          color={theme.header.text}
-        />
-        <HomeLink to="/">HairDo</HomeLink>
-      </LeftHeader>
-      <List>
-        {categories.map((category, index) => (
-          <ListLink key={index} to={category.slug}>
-            {category.title}
-          </ListLink>
-        ))}
-      </List>
+      <Container>
+        <Header>
+          <SEO {...meta} />
+          <LeftHeader>
+            <MenuButton
+              onClick={onShowSideMenu}
+              active={showSideMenu}
+              color={theme.header.text}
+            />
+            <HomeLink to="/">HairDo</HomeLink>
+          </LeftHeader>
+          <List>
+            {categories.map(({ slug, hero: { title } }) => (
+              <ListLink key={title} to={slug}>
+                {title}
+              </ListLink>
+            ))}
+          </List>
+        </Header>
+      </Container>
     </Wrapper>
   )
 }
