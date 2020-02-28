@@ -45,6 +45,10 @@ export const theme = {
     background: GREEN_THEME.green,
     text: GREEN_THEME.grey,
   },
+  sideMenu: {
+    background: GREEN_THEME.greyExtraLight,
+    text: GREEN_THEME.grey,
+  },
   body: {
     heading: GREEN_THEME.grey,
     text: GREEN_THEME.grey,

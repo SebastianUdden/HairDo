@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link as GatsbyLink } from "gatsby"
 import Image from "./Image"
 import { MEDIA_MEDIUM, MEDIA_LARGE, MEDIA_X_LARGE } from "../../constants/sizes"
-import { DP2, DP6 } from "../../constants/shadows"
+import { shadow, shadowHover } from "../../constants/shadows"
 
 const Link = styled(GatsbyLink)`
   text-decoration: none;
@@ -11,11 +11,11 @@ const Link = styled(GatsbyLink)`
   min-height: 15rem;
   width: calc(50% - 12px);
   margin: 6px;
-  box-shadow: ${DP2};
+  box-shadow: ${shadow};
 
   :hover {
     cursor: pointer;
-    box-shadow: ${DP6};
+    box-shadow: ${shadowHover};
   }
 
   ${MEDIA_MEDIUM} {
@@ -37,11 +37,11 @@ const ExternalLink = styled.a`
   min-height: 15rem;
   width: calc(50% - 12px);
   margin: 6px;
-  box-shadow: ${DP2};
+  box-shadow: ${shadow};
 
   :hover {
     cursor: pointer;
-    box-shadow: ${DP6};
+    box-shadow: ${shadowHover};
   }
 
   ${MEDIA_MEDIUM} {
