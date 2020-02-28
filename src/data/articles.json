@@ -3,7 +3,7 @@
     "title": "Classic chic ponytail",
     "slug": "classic-chic-ponytail",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    "categories": ["him", "her"],
+    "categories": ["women styles", "ponytails"],
     "imageUrl": "https://picsum.photos/400/400",
     "createdAt": "2020-01-08T00:00:00Z",
     "steps": {
@@ -66,7 +66,7 @@
     "title": "Shabby chic ponytail",
     "slug": "shabby-chic-ponytail",
     "description": "How to create an amazing ponytail, FAB!",
-    "categories": ["her"],
+    "categories": ["women styles", "ponytails"],
     "imageUrl": "https://picsum.photos/800/500",
     "createdAt": "2020-01-02T00:00:00Z",
     "steps": {
@@ -114,7 +114,7 @@
     "title": "Dabby chic ponytail",
     "slug": "dabby-chic-ponytail",
     "description": "How to create an amazing ponytail, FAB!",
-    "categories": ["her"],
+    "categories": ["women styles", "ponytails"],
     "imageUrl": "https://picsum.photos/800/1000",
     "createdAt": "2020-01-05T00:00:00Z",
     "steps": {
@@ -164,7 +164,7 @@
     "description": "Get a well groomed and well grown look!",
     "imageUrl": "https://picsum.photos/410/400",
     "createdAt": "2020-01-04T00:00:00Z",
-    "categories": ["him"]
+    "categories": ["men styles", "beards"]
   },
   {
     "title": "Short beard",
@@ -172,6 +172,6 @@
     "description": "Get a well groomed and slim look!",
     "imageUrl": "https://picsum.photos/420/400",
     "createdAt": "2020-01-09T00:00:00Z",
-    "categories": ["him"]
+    "categories": ["men styles", "beards"]
   }
 ]

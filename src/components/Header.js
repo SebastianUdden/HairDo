@@ -19,6 +19,7 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 3.3rem;
 `
 const LeftHeader = styled.div`
   display: flex;
@@ -26,11 +27,9 @@ const LeftHeader = styled.div`
   align-items: center;
 `
 const List = styled.ul`
-  opacity: 0;
-  pointer-events: none;
+  display: none;
   ${MEDIA_MIN_MEDIUM} {
-    opacity: 1;
-    pointer-events: all;
+    display: initial;
   }
 `
 

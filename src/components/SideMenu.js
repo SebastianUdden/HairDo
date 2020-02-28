@@ -28,29 +28,31 @@ const Category = styled.li`
   font-size: large;
 `
 
-export default ({ show, onToggleSideMenu, categories = [] }) => (
-  <NavigationDrawer
-    boxShadow={shadow}
-    color={theme.sideMenu.text}
-    backgroundColor={theme.sideMenu.background}
-    onHide={onToggleSideMenu}
-    show={show}
-    buttonElementId="hamburger-menu"
-  >
-    <Heading color={theme.sideMenu.text}>
-      <span>HairDo</span>
-      <MenuButton
-        onClick={onToggleSideMenu}
-        show={show}
-        color={theme.sideMenu.text}
-      />
-    </Heading>
-    <Categories>
-      {categories.map(({ slug, hero: { title } }) => (
-        <Category key={title}>
-          <Link to={slug}>{title}</Link>
-        </Category>
-      ))}
-    </Categories>
-  </NavigationDrawer>
-)
+export default ({ show, onToggleSideMenu, categories = [] }) => {
+  return (
+    <NavigationDrawer
+      boxShadow={shadow}
+      color={theme.sideMenu.text}
+      backgroundColor={theme.sideMenu.background}
+      onHide={onToggleSideMenu}
+      show={show}
+      buttonElementId="hamburger-menu"
+    >
+      <Heading color={theme.sideMenu.text}>
+        <span>HairDo</span>
+        <MenuButton
+          onClick={onToggleSideMenu}
+          show={show}
+          color={theme.sideMenu.text}
+        />
+      </Heading>
+      <Categories>
+        {categories.map(({ slug, hero: { title } }) => (
+          <Category key={title}>
+            <Link to={slug}>{title}</Link>
+          </Category>
+        ))}
+      </Categories>
+    </NavigationDrawer>
+  )
+}

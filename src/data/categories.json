@@ -1,20 +1,76 @@
 [
   {
-    "slug": "/him/",
+    "slug": "/men-styles/",
     "hero": {
-      "title": "Him",
+      "title": "Men Styles",
       "subtitle": "Great inspiration for men!",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/400/410"
+    },
+    "subCategories": ["/beards/", "/buns/"]
+  },
+  {
+    "slug": "/women-styles/",
+    "hero": {
+      "title": "Women Styles",
+      "subtitle": "Great inspiration for women!",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/400/420"
+    },
+    "subCategories": ["/ponytails/", "/buns/"]
+  },
+  {
+    "slug": "/short-length-hair/",
+    "hero": {
+      "title": "Short length hair",
+      "subtitle": "A selection of shorter haircuts and styles.",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/400/440"
+    }
+  },
+  {
+    "slug": "/medium-length-hair/",
+    "hero": {
+      "title": "Medium length hair",
+      "subtitle": "A selection of medium length haircuts and styles.",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/450/450"
+    }
+  },
+  {
+    "slug": "/long-length-hair/",
+    "hero": {
+      "title": "Long length hair",
+      "subtitle": "A selection of long length haircuts and styles.",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/450/450"
+    }
+  },
+  {
+    "slug": "/beards/",
+    "hero": {
+      "title": "Beards",
+      "subtitle": "Find the perfect beard for you.",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/500/500"
+    }
+  },
+  {
+    "slug": "/ponytails/",
+    "hero": {
+      "title": "Ponytails",
+      "subtitle": "Find your ponytail!",
       "color": "white",
       "imageUrl": "https://picsum.photos/400/400"
     }
   },
   {
-    "slug": "/her/",
+    "slug": "/buns/",
     "hero": {
-      "title": "Her",
-      "subtitle": "Great inspiration for men!",
+      "title": "Buns",
+      "subtitle": "Find your bun!",
       "color": "white",
-      "imageUrl": "https://picsum.photos/400/400"
+      "imageUrl": "https://picsum.photos/400/430"
     }
   }
 ]
