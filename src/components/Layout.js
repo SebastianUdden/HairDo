@@ -32,7 +32,12 @@ export default ({ meta, categories, children }) => {
   )
   return (
     <Wrapper>
-      <SideMenu isOpening={isOpening} hide={hide} setHide={setHide} />
+      <SideMenu
+        isOpening={isOpening}
+        hide={hide}
+        setHide={setHide}
+        categories={categories}
+      />
       <Header
         meta={{ ...meta, ...site.siteMetaData }}
         categories={categories}
