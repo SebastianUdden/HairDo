@@ -8,9 +8,9 @@ const Container = styled.div`
 
 const Scrim = styled.div`
   position: fixed;
-  transform: ${p => (p.hide ? "translateX(-130%)" : "translate(0)")};
+  transform: ${p => (p.show ? "translate(0)" : "translateX(-130%)")};
   transition: opacity 1s;
-  opacity: ${p => (p.hide ? 0 : 0.3)};
+  opacity: ${p => (p.show ? 0.3 : 0)};
   z-index: 90;
   top: 0;
   bottom: 0;
@@ -22,7 +22,7 @@ const Scrim = styled.div`
 const Wrapper = styled.div`
   position: fixed;
   margin: 0 auto;
-  transform: ${p => (p.hide ? "translateX(-110%)" : "translate(0)")};
+  transform: ${p => (p.show ? "translate(0)" : "translateX(-110%)")};
   transition: transform 0.3s;
   z-index: 100;
 
@@ -43,46 +43,21 @@ const NavigationDrawer = ({
   color,
   backgroundColor,
   children,
-  buttonElementId,
   onHide,
-  hide,
-}) => {
-  if (typeof document === "undefined") return null
-  document.addEventListener("click", evt => {
-    const flyoutElement = document.getElementById("navigation-drawer")
-    const buttonElement = document.getElementById(buttonElementId)
-    let targetElement = evt.target // clicked element
-    do {
-      if (targetElement === flyoutElement || targetElement === buttonElement) {
-        // This is a click inside. Do nothing, just return.
-        return
-      }
-      // Go up the DOM
-      targetElement = targetElement.parentNode
-    } while (targetElement)
-
-    // This is a click outside.
-    onHide()
-  })
-
-  return (
-    <Container>
-      <Wrapper
-        id="navigation-drawer"
-        boxShadow={boxShadow}
-        color={color}
-        backgroundColor={backgroundColor}
-        hide={hide}
-      >
-        {children}
-      </Wrapper>
-      <Scrim
-        onClick={e => e.stopPropagation()}
-        hide={hide}
-        backgroundColor={color}
-      />
-    </Container>
-  )
-}
+  show,
+}) => (
+  <Container>
+    <Wrapper
+      id="navigation-drawer"
+      boxShadow={boxShadow}
+      color={color}
+      backgroundColor={backgroundColor}
+      show={show}
+    >
+      {children}
+    </Wrapper>
+    <Scrim onClick={onHide} show={show} backgroundColor={color} />
+  </Container>
+)
 
 export default NavigationDrawer

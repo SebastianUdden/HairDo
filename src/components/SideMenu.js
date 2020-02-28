@@ -26,27 +26,29 @@ const Categories = styled.ul`
   }
 `
 
-export default ({ isOpening, hide, setHide, categories = [] }) => {
-  return (
-    <NavigationDrawer
-      boxShadow={shadow}
-      color={theme.sideMenu.text}
-      backgroundColor={theme.sideMenu.background}
-      onHide={() => !isOpening && setHide(true)}
-      hide={hide}
-      buttonElementId="hamburger-menu"
-    >
-      <Heading color={theme.sideMenu.text}>
-        <span>HairDo</span>
-        <MenuButton onClick={() => setHide(true)} active={!hide} />
-      </Heading>
-      <Categories>
-        {categories.map(({ slug, title }) => (
-          <li>
-            <Link to={slug}>{title}</Link>
-          </li>
-        ))}
-      </Categories>
-    </NavigationDrawer>
-  )
-}
+export default ({ show, onToggleSideMenu, categories = [] }) => (
+  <NavigationDrawer
+    boxShadow={shadow}
+    color={theme.sideMenu.text}
+    backgroundColor={theme.sideMenu.background}
+    onHide={onToggleSideMenu}
+    show={show}
+    buttonElementId="hamburger-menu"
+  >
+    <Heading color={theme.sideMenu.text}>
+      <span>HairDo</span>
+      <MenuButton
+        onClick={onToggleSideMenu}
+        show={show}
+        color={theme.sideMenu.text}
+      />
+    </Heading>
+    <Categories>
+      {categories.map(({ slug, title }) => (
+        <li key={title}>
+          <Link to={slug}>{title}</Link>
+        </li>
+      ))}
+    </Categories>
+  </NavigationDrawer>
+)

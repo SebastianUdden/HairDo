@@ -15,8 +15,7 @@ const Body = styled.div`
 `
 
 export default ({ meta, categories, children }) => {
-  const [hide, setHide] = useState(false)
-  const [isOpening, setIsOpening] = useState(false)
+  const [show, setShow] = useState(false)
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -33,20 +32,15 @@ export default ({ meta, categories, children }) => {
   return (
     <Wrapper>
       <SideMenu
-        isOpening={isOpening}
-        hide={hide}
-        setHide={setHide}
+        show={show}
+        onToggleSideMenu={() => setShow(!show)}
         categories={categories}
       />
       <Header
         meta={{ ...meta, ...site.siteMetaData }}
         categories={categories}
-        onShowSideMenu={() => {
-          setIsOpening(true)
-          setTimeout(() => setHide(false), 100)
-          setTimeout(() => setIsOpening(false), 300)
-        }}
-        showSideMenu={!hide}
+        onShowSideMenu={() => setShow(true)}
+        showSideMenu={show}
       />
       <Body>{children}</Body>
       <Footer meta={{ ...meta, ...site.siteMetaData }} />

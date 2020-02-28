@@ -26,7 +26,12 @@ export default ({
         <Title>{title}</Title>
         <ArticleWrapper>
           {articles.map(({ title, slug, imageUrl }) => (
-            <Card title={title} slug={slug} imageUrl={imageUrl}></Card>
+            <Card
+              key={title}
+              title={title}
+              slug={slug}
+              imageUrl={imageUrl}
+            ></Card>
           ))}
         </ArticleWrapper>
       </Container>

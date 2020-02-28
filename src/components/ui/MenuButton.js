@@ -22,40 +22,38 @@ const SVG = styled.svg`
   stroke-linecap: square;
   stroke: ${p => p.color};
   transition: stroke 0.35s ease-out, transform 0.35s ease-in-out;
-  transform: ${p => (p.active ? "rotate(225deg)" : "rotate(0)")};
+  transform: ${p => (p.show ? "rotate(225deg)" : "rotate(0)")};
   path {
     backface-visibility: hidden;
     transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
   }
   .x {
-    opacity: ${p => (p.active ? 1 : 0)};
+    opacity: ${p => (p.show ? 1 : 0)};
   }
   .h {
-    opacity: ${p => (p.active ? 0 : 1)};
+    opacity: ${p => (p.show ? 0 : 1)};
   }
 `
 
-export default ({ onClick, active, color }) => {
-  return (
-    <Button id="menu" aria-pressed={active} onClick={onClick}>
-      <SVG
-        width="38"
-        height="38"
-        viewBox="0 0 38 38"
-        xmlns="https://www.w3.org/2000/svg"
-        active={active}
-        color={color}
-      >
-        <title>Open</title>
-        <path class="h t" d="M10.5 10l17 0" />
-        <path d="M10.5 19l17 0" />
-        <path class="h b" d="M10.5 28l17 0" />
-        <path class="x" d="M19 10.5l0 17" />
-      </SVG>
-      <span>Menu</span>
-    </Button>
-  )
-}
+export default ({ onClick, show, color }) => (
+  <Button id="menu" aria-pressed={show} onClick={onClick}>
+    <SVG
+      width="38"
+      height="38"
+      viewBox="0 0 38 38"
+      xmlns="https://www.w3.org/2000/svg"
+      show={show}
+      color={color}
+    >
+      <title>Open</title>
+      <path className="h t" d="M10.5 10l17 0" />
+      <path d="M10.5 19l17 0" />
+      <path className="h b" d="M10.5 28l17 0" />
+      <path className="x" d="M19 10.5l0 17" />
+    </SVG>
+    <span>Menu</span>
+  </Button>
+)
 
 // BUTTON
 /* display: block;
