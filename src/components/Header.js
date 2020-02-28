@@ -4,12 +4,13 @@ import SEO from "./Seo"
 import Link from "./ui/Link"
 import { theme } from "../constants/colors"
 import MenuButton from "./ui/MenuButton"
+import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
+  padding: 0 1rem 0 0;
   background-color: ${theme.header.background};
   color: ${theme.header.text};
   top: 0;
@@ -22,20 +23,26 @@ const LeftHeader = styled.div`
   justify-content: center;
   align-items: center;
 `
-const List = styled.ul``
+const List = styled.ul`
+  opacity: 0;
+  pointer-events: none;
+  ${MEDIA_MIN_MEDIUM} {
+    opacity: 1;
+    pointer-events: all;
+  }
+`
 
 const ListItem = styled(Link)`
   margin-left: 1rem;
 `
 const HomeLink = styled(Link)`
-  margin-left: 0.5rem;
   font-size: 24px;
 `
 const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 
 export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
   let [position, setPosition] = useState(0)
-  let [visible, setVisible] = useState(true)
+  let [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +64,11 @@ export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
     <Wrapper show={visible}>
       <SEO {...meta} />
       <LeftHeader>
-        <MenuButton onClick={onShowSideMenu} active={showSideMenu} color={theme.header.text} />
+        <MenuButton
+          onClick={onShowSideMenu}
+          active={showSideMenu}
+          color={theme.header.text}
+        />
         <HomeLink to="/">HairDo</HomeLink>
       </LeftHeader>
       <List>

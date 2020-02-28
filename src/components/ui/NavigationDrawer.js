@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   position: fixed;
   margin: 0 auto;
   transform: ${p => (p.show ? "translate(0)" : "translateX(-110%)")};
-  transition: transform 0.3s;
+  transition: transform 0.4s;
   z-index: 100;
 
   top: 0;

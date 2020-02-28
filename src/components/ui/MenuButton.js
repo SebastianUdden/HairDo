@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { MEDIA_MIN_MEDIUM } from "../../constants/sizes"
 
 const Button = styled.button`
   background-color: inherit;
@@ -11,6 +12,12 @@ const Button = styled.button`
   span {
     position: absolute;
     text-indent: -200rem;
+  }
+  opacity: 1;
+  pointer-events: all;
+  ${MEDIA_MIN_MEDIUM} {
+    opacity: 0;
+    pointer-events: none;
   }
 `
 const SVG = styled.svg`
