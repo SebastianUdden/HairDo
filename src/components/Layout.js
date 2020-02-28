@@ -15,7 +15,7 @@ const Body = styled.div`
 `
 
 export default ({ meta, categories, children }) => {
-  const [hide, setHide] = useState(true)
+  const [hide, setHide] = useState(false)
   const [isOpening, setIsOpening] = useState(false)
   const { site } = useStaticQuery(
     graphql`

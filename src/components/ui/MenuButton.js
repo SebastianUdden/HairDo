@@ -21,10 +21,11 @@ const SVG = styled.svg`
   stroke-width: 5;
   stroke-linecap: square;
   stroke: black;
-  transition: stroke 0.8s ease-out, transform 0.8s ease-in-out;
+  transition: stroke 0.35s ease-out, transform 0.35s ease-in-out;
+  transform: ${p => (p.active ? "rotate(225deg)" : "rotate(0)")};
   path {
     backface-visibility: hidden;
-    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
   }
   .x {
     opacity: ${p => (p.active ? 1 : 0)};
