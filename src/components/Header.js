@@ -9,6 +9,7 @@ import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
 import Container from "./ui/Container"
 import SVG from "./ui/SVG"
 import search from "../svgs/search"
+import AnimateRotation from "./ui/AnimateRotation"
 
 const Wrapper = styled.div`
   background-color: ${theme.header.background};
@@ -104,7 +105,9 @@ export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
               ))}
             </List>
             <SearchButton onClick={() => setShowSearch(true)}>
-              <SVG {...search} />
+              <AnimateRotation>
+                <SVG {...search} />
+              </AnimateRotation>
             </SearchButton>
           </Header>
         )}

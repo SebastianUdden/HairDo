@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { theme } from "../../constants/colors"
 import close from "../../svgs/close"
 import SVG from "./SVG"
 import useKeyPress from "../../hooks/keyPress"
+import AnimateRotation from "./AnimateRotation"
 
 const Wrapper = styled.div`
   display: flex;
@@ -36,23 +37,15 @@ const onSubmit = value => console.log({ value })
 
 const Search = ({ previousSearchValue, value, onChange, onClose, minimal }) => {
   const [animate, setAnimate] = useState(false)
-  const firstUpdate = useRef(true)
   const enter = useKeyPress("Enter")
 
   useEffect(() => {
     setAnimate(true)
+    document.getElementById("Search").focus()
   }, [])
 
   useEffect(() => {
-    if (typeof window === "undefined") return null
     if (!enter) return
-    if (
-      firstUpdate.current ||
-      document.activeElement !== document.getElementById("Search")
-    ) {
-      firstUpdate.current = false
-      return
-    }
     onSubmit(value)
   }, [enter, onSubmit])
 
@@ -69,7 +62,9 @@ const Search = ({ previousSearchValue, value, onChange, onClose, minimal }) => {
         minimal={minimal}
       />
       <Close onClick={onClose}>
-        <SVG {...close} color={theme.search.text} />
+        <AnimateRotation>
+          <SVG {...close} color={theme.search.text} />
+        </AnimateRotation>
       </Close>
     </Wrapper>
   )
