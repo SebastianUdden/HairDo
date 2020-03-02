@@ -81,6 +81,7 @@ export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
               </ListLink>
             ))}
           </List>
+          <span></span>
         </Header>
       </Container>
     </Wrapper>

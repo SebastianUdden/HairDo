@@ -27,6 +27,9 @@ const Category = styled.li`
   list-style-type: none;
   font-size: large;
 `
+const Subcategory = styled(Category)`
+  font-size: medium;
+`
 
 export default ({ show, onToggleSideMenu, categories = [] }) => {
   return (
@@ -47,9 +50,18 @@ export default ({ show, onToggleSideMenu, categories = [] }) => {
         />
       </Heading>
       <Categories>
-        {categories.map(({ slug, hero: { title } }) => (
+        {categories.map(({ slug, hero: { title }, subCategories }) => (
           <Category key={title}>
             <Link to={slug}>{title}</Link>
+            {subCategories && (
+              <ul>
+                {subCategories.map(({ slug, hero: { title } }) => (
+                  <Subcategory>
+                    <Link to={slug}>{title}</Link>
+                  </Subcategory>
+                ))}
+              </ul>
+            )}
           </Category>
         ))}
       </Categories>

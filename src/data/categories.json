@@ -1,15 +1,5 @@
 [
   {
-    "slug": "/men-styles/",
-    "hero": {
-      "title": "Men Styles",
-      "subtitle": "Great inspiration for men!",
-      "color": "white",
-      "imageUrl": "https://picsum.photos/400/410"
-    },
-    "subCategories": ["/beards/", "/buns/"]
-  },
-  {
     "slug": "/women-styles/",
     "hero": {
       "title": "Women Styles",
@@ -17,30 +7,45 @@
       "color": "white",
       "imageUrl": "https://picsum.photos/400/420"
     },
-    "subCategories": ["/ponytails/", "/buns/"]
+    "subCategories": [
+      "/women-short/",
+      "/women-medium/",
+      "/women-long/",
+      "/special-occasions/"
+    ]
   },
   {
-    "slug": "/short-length-hair/",
+    "slug": "/men-styles/",
     "hero": {
-      "title": "Short length hair",
+      "title": "Men Styles",
+      "subtitle": "Great inspiration for men!",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/400/410"
+    },
+    "subCategories": ["/men-short/", "/men-medium/", "/men-long/", "/beards/"]
+  },
+  {
+    "slug": "/men-short/",
+    "hero": {
+      "title": "Short",
       "subtitle": "A selection of shorter haircuts and styles.",
       "color": "white",
       "imageUrl": "https://picsum.photos/400/440"
     }
   },
   {
-    "slug": "/medium-length-hair/",
+    "slug": "/men-medium/",
     "hero": {
-      "title": "Medium length hair",
+      "title": "Medium",
       "subtitle": "A selection of medium length haircuts and styles.",
       "color": "white",
       "imageUrl": "https://picsum.photos/450/450"
     }
   },
   {
-    "slug": "/long-length-hair/",
+    "slug": "/men-long/",
     "hero": {
-      "title": "Long length hair",
+      "title": "Long",
       "subtitle": "A selection of long length haircuts and styles.",
       "color": "white",
       "imageUrl": "https://picsum.photos/450/450"
@@ -56,21 +61,39 @@
     }
   },
   {
-    "slug": "/ponytails/",
+    "slug": "/women-short/",
     "hero": {
-      "title": "Ponytails",
-      "subtitle": "Find your ponytail!",
+      "title": "Short",
+      "subtitle": "A selection of shorter haircuts and styles.",
       "color": "white",
-      "imageUrl": "https://picsum.photos/400/400"
+      "imageUrl": "https://picsum.photos/400/440"
     }
   },
   {
-    "slug": "/buns/",
+    "slug": "/women-medium/",
     "hero": {
-      "title": "Buns",
-      "subtitle": "Find your bun!",
+      "title": "Medium",
+      "subtitle": "A selection of medium length haircuts and styles.",
       "color": "white",
-      "imageUrl": "https://picsum.photos/400/430"
+      "imageUrl": "https://picsum.photos/450/450"
+    }
+  },
+  {
+    "slug": "/women-long/",
+    "hero": {
+      "title": "Long",
+      "subtitle": "A selection of long length haircuts and styles.",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/450/450"
+    }
+  },
+  {
+    "slug": "/special-occasions/",
+    "hero": {
+      "title": "Special occasions",
+      "subtitle": "Find the perfect style for weddings, proms and other events.",
+      "color": "white",
+      "imageUrl": "https://picsum.photos/450/450"
     }
   }
 ]

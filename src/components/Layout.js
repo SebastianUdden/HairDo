@@ -15,33 +15,8 @@ const Body = styled.div`
   flex: 1 0 auto;
   color: ${theme.body.text};
 `
-const getSubCategories = categories => [
-  ...new Set(
-    categories.reduce(
-      (accumulator, category) => [
-        ...accumulator,
-        ...(category.subCategories || []),
-      ],
-      []
-    )
-  ),
-]
 
-const getHeadCategories = (categories, subCategories) =>
-  categories
-    .filter(category => !subCategories.some(x => x === category.slug))
-    .map(category => ({
-      ...category,
-      subCategories: category.subCategories
-        ? categories.filter(x => category.subCategories.some(y => y === x.slug))
-        : [],
-    }))
-
-export default ({ meta, categories, children }) => {
-  const subCategories = getSubCategories(categories)
-  const headCategories = getHeadCategories(categories, subCategories)
-  console.log({ subCategories })
-  console.log({ headCategories })
+export default ({ meta, categories = [], children }) => {
   const [show, setShow] = useState(false)
   const { site } = useStaticQuery(
     graphql`
@@ -61,11 +36,11 @@ export default ({ meta, categories, children }) => {
       <SideMenu
         show={show}
         onToggleSideMenu={() => setShow(!show)}
-        categories={headCategories}
+        categories={categories}
       />
       <Header
         meta={{ ...meta, ...site.siteMetaData }}
-        categories={headCategories}
+        categories={categories}
         onShowSideMenu={() => setShow(true)}
         showSideMenu={show}
       />

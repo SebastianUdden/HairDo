@@ -4,13 +4,38 @@ const home = require("./src/data/home.json")
 
 const sortByCreatedAt = (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
 
+const getSubCategories = categories => {
+  if (!categories) return []
+  const subCategories = categories.reduce(
+    (accumulator, category) => [
+      ...accumulator,
+      ...(category.subCategories || []),
+    ],
+    []
+  )
+  return [...new Set(subCategories)]
+}
+
+const getHeadCategories = (categories, subCategories) =>
+  categories
+    .filter(category => !subCategories.some(x => x === category.slug))
+    .map(category => ({
+      ...category,
+      subCategories: category.subCategories
+        ? categories.filter(x => category.subCategories.some(y => y === x.slug))
+        : [],
+    }))
+
 exports.createPages = async ({ actions: { createPage } }) => {
+  const subCategories = getSubCategories(categories)
+  const headCategories = getHeadCategories(categories, subCategories)
+
   createPage({
     path: `/`,
     component: require.resolve("./src/templates/homePage.js"),
     context: {
       articles: articles.sort(sortByCreatedAt).slice(0, 4),
-      categories,
+      categories: headCategories,
       home,
     },
   })
@@ -25,7 +50,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
             category => category.toLowerCase() === page.hero.title.toLowerCase()
           )
         ),
-        categories,
+        categories: headCategories,
         page,
       },
     })
@@ -35,7 +60,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
     createPage({
       path: page.slug,
       component: require.resolve("./src/templates/articlePage.js"),
-      context: { categories, page },
+      context: { categories: headCategories, page },
     })
   })
 }
