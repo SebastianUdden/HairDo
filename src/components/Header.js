@@ -69,7 +69,7 @@ export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
           <LeftHeader>
             <MenuButton
               onClick={onShowSideMenu}
-              active={showSideMenu}
+              show={showSideMenu}
               color={theme.header.text}
             />
             <HomeLink to="/">HairDo</HomeLink>
