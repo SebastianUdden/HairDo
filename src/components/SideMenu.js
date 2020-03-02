@@ -9,7 +9,7 @@ import MenuButton from "./ui/MenuButton"
 const Heading = styled.h1`
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid ${p => p.color};
+  border-bottom: 1px solid ${p => p.borderColor};
   min-height: 3.3rem;
   font-size: x-large;
   display: flex;
@@ -37,7 +37,7 @@ export default ({ show, onToggleSideMenu, categories = [] }) => (
     show={show}
     buttonElementId="hamburger-menu"
   >
-    <Heading color={theme.sideMenu.text}>
+    <Heading color={theme.sideMenu.text} borderColor={theme.sideMenu.border}>
       <span>HairDo</span>
       <MenuButton
         onClick={onToggleSideMenu}
