@@ -4,8 +4,11 @@ import SEO from "./Seo"
 import Link from "./ui/Link"
 import { theme } from "../constants/colors"
 import MenuButton from "./ui/MenuButton"
+import Search from "./ui/Search"
 import { MEDIA_MIN_MEDIUM } from "../constants/sizes"
 import Container from "./ui/Container"
+import SVG from "./ui/SVG"
+import search from "../svgs/search"
 
 const Wrapper = styled.div`
   background-color: ${theme.header.background};
@@ -39,9 +42,15 @@ const ListItem = styled(Link)`
 const HomeLink = styled(Link)`
   font-size: 24px;
 `
+const SearchButton = styled.button`
+  padding: 0 0.6rem;
+  outline: none;
+`
 const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 
 export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
+  const [showSearch, setShowSearch] = useState(false)
+  const [value, setValue] = useState("")
   let [position, setPosition] = useState(0)
   let [visible, setVisible] = useState(true)
 
@@ -64,25 +73,41 @@ export default ({ meta, onShowSideMenu, showSideMenu, categories = [] }) => {
   return (
     <Wrapper show={visible}>
       <Container>
-        <Header>
-          <SEO {...meta} />
-          <LeftHeader>
-            <MenuButton
-              onClick={onShowSideMenu}
-              show={showSideMenu}
-              color={theme.header.text}
-            />
-            <HomeLink to="/">HairDo</HomeLink>
-          </LeftHeader>
-          <List>
-            {categories.map(({ slug, hero: { title } }) => (
-              <ListLink key={title} to={slug}>
-                {title}
-              </ListLink>
-            ))}
-          </List>
-          <span></span>
-        </Header>
+        {showSearch && (
+          <Search
+            value={value}
+            previousSearchValue=""
+            onChange={e => setValue(e.target.value)}
+            onClose={() => {
+              setShowSearch(false)
+              setValue("")
+            }}
+            onSubmit={() => alert(`Search for ${value}`)}
+          />
+        )}
+        {!showSearch && (
+          <Header>
+            <SEO {...meta} />
+            <LeftHeader>
+              <MenuButton
+                onClick={onShowSideMenu}
+                show={showSideMenu}
+                color={theme.header.text}
+              />
+              <HomeLink to="/">HairDo</HomeLink>
+            </LeftHeader>
+            <List>
+              {categories.map(({ slug, hero: { title } }) => (
+                <ListLink key={title} to={slug}>
+                  {title}
+                </ListLink>
+              ))}
+            </List>
+            <SearchButton onClick={() => setShowSearch(true)}>
+              <SVG {...search} />
+            </SearchButton>
+          </Header>
+        )}
       </Container>
     </Wrapper>
   )

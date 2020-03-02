@@ -12,18 +12,23 @@ const THEME = {
   white: "#ffffff",
 
   /* Main Primary color */
-  pink: "#ED4276",
+  primary: "#ED4276", // pink
 }
 
 export const theme = {
   header: {
-    background: THEME.pink,
+    background: THEME.primary,
     text: THEME.white,
+  },
+  search: {
+    background: THEME.white,
+    text: THEME.greyDark,
+    border: THEME.primary,
   },
   sideMenu: {
     background: THEME.white,
     text: THEME.greyDark,
-    border: THEME.pink,
+    border: THEME.primary,
   },
   body: {
     heading: THEME.grey,
@@ -34,7 +39,7 @@ export const theme = {
     text: THEME.grey,
   },
   articlePage: {
-    subtitle: THEME.pink,
+    subtitle: THEME.primary,
     divider: THEME.grey,
   },
 }

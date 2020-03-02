@@ -26,9 +26,11 @@ const Category = styled.li`
   margin: 1rem 0 0;
   list-style-type: none;
   font-size: large;
+  font-weight: 700;
 `
 const Subcategory = styled(Category)`
   font-size: medium;
+  font-weight: 400;
 `
 
 export default ({ show, onToggleSideMenu, categories = [] }) => {
