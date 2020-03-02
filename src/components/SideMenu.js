@@ -9,7 +9,7 @@ import MenuButton from "./ui/MenuButton"
 const Heading = styled.h1`
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid ${p => p.borderColor};
+  border-bottom: 1px solid ${p => p.border};
   min-height: 3.3rem;
   font-size: x-large;
   display: flex;
@@ -28,29 +28,31 @@ const Category = styled.li`
   font-size: large;
 `
 
-export default ({ show, onToggleSideMenu, categories = [] }) => (
-  <NavigationDrawer
-    boxShadow={shadow}
-    color={theme.sideMenu.text}
-    backgroundColor={theme.sideMenu.background}
-    onHide={onToggleSideMenu}
-    show={show}
-    buttonElementId="hamburger-menu"
-  >
-    <Heading color={theme.sideMenu.text} borderColor={theme.sideMenu.border}>
-      <span>HairDo</span>
-      <MenuButton
-        onClick={onToggleSideMenu}
-        show={show}
-        color={theme.sideMenu.text}
-      />
-    </Heading>
-    <Categories>
-      {categories.map(({ slug, hero: { title } }) => (
-        <Category key={title}>
-          <Link to={slug}>{title}</Link>
-        </Category>
-      ))}
-    </Categories>
-  </NavigationDrawer>
-)
+export default ({ show, onToggleSideMenu, categories = [] }) => {
+  return (
+    <NavigationDrawer
+      boxShadow={shadow}
+      color={theme.sideMenu.text}
+      backgroundColor={theme.sideMenu.background}
+      onHide={onToggleSideMenu}
+      show={show}
+      buttonElementId="hamburger-menu"
+    >
+      <Heading color={theme.sideMenu.text} border={theme.sideMenu.border}>
+        <span>HairDo</span>
+        <MenuButton
+          onClick={onToggleSideMenu}
+          show={show}
+          color={theme.sideMenu.text}
+        />
+      </Heading>
+      <Categories>
+        {categories.map(({ slug, hero: { title } }) => (
+          <Category key={title}>
+            <Link to={slug}>{title}</Link>
+          </Category>
+        ))}
+      </Categories>
+    </NavigationDrawer>
+  )
+}
