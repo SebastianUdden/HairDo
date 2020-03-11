@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `
 const HeroImage = styled.div`
   height: 50vh;
+  min-height: 20rem;
   width: 100%;
   background-image: ${p => `url(${p.image})`};
   background-repeat: no-repeat;

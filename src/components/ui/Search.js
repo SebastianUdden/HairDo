@@ -19,11 +19,13 @@ const Wrapper = styled.div`
 `
 
 const Input = styled.input`
-  padding: 1rem 0.9rem 1.05rem;
+  padding-left: 1rem;
+  height: 3.18rem;
   font-size: medium;
   width: 100%;
   border: none;
   outline: none;
+  -webkit-appearance: none;
   ::-webkit-search-decoration,
   ::-webkit-search-cancel-button,
   ::-webkit-search-results-button,
@@ -31,7 +33,7 @@ const Input = styled.input`
     -webkit-appearance: none;
   }
   ${MEDIA_MIN_MEDIUM} {
-    padding: 1rem 0.9rem;
+    height: 3.05rem;
   }
 `
 

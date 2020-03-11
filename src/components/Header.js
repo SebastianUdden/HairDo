@@ -23,7 +23,7 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 3.3rem;
+  height: 3.3rem;
 `
 const LeftHeader = styled.div`
   display: flex;
