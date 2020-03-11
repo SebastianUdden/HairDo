@@ -44,8 +44,9 @@ const HomeLink = styled(Link)`
   font-size: 24px;
 `
 const SearchButton = styled.button`
-  padding: 0 0.6rem;
-  outline: none;
+  padding: 0.7rem;
+  background-color: inherit;
+  border: none;
 `
 const ListLink = ({ to, children }) => <ListItem to={to}>{children}</ListItem>
 

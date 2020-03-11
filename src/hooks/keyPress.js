@@ -1,23 +1,28 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 
 // Hook
 function useKeyPress(targetKey) {
   // State for keeping track of whether key is pressed
   const [keyPressed, setKeyPressed] = useState(false)
 
-  // If pressed key is our target key then set to true
-  const downHandler = ({ key }) => {
-    if (key === targetKey) {
+  const downHandler = useCallback(
+    keydownEvent => {
+      const { key, repeat } = keydownEvent
+      if (repeat) return
+      if (key !== targetKey) return
       setKeyPressed(true)
-    }
-  }
+    },
+    [targetKey]
+  )
 
-  // If released key is our target key then set to false
-  const upHandler = ({ key }) => {
-    if (key === targetKey) {
+  const upHandler = useCallback(
+    keyupEvent => {
+      const { key } = keyupEvent
+      if (key !== targetKey) return
       setKeyPressed(false)
-    }
-  }
+    },
+    [targetKey]
+  )
 
   // Add event listeners
   useEffect(() => {
@@ -28,7 +33,7 @@ function useKeyPress(targetKey) {
       window.removeEventListener("keydown", downHandler)
       window.removeEventListener("keyup", upHandler)
     }
-  })
+  }, [downHandler, upHandler])
 
   return keyPressed
 }

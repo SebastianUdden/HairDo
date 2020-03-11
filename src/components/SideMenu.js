@@ -9,7 +9,7 @@ import MenuButton from "./ui/MenuButton"
 const Heading = styled.h1`
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid ${p => p.border};
+  border-bottom: 2px solid ${p => p.border};
   min-height: 3.3rem;
   font-size: x-large;
   display: flex;
