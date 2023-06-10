@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.19.7",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-manifest": "^2.2.42",
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
